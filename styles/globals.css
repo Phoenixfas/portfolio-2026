@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "LED_Dot_Matrix";
+  src: url("/fonts/LED_Dot_Matrix.ttf") format("truetype");
+  font-style: normal;
+}
+
+.led-dot {
+  font-family: "LED_Dot_Matrix", sans-serif;
+}
 
 :root {
   --background: #ffffff;
