@@ -17,35 +17,35 @@ export default function Trees_f() {
         prevStationRef.current = station;
     }, [station]);
     return (
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full h-auto aspect-[5.0659/1] overflow-hidden">
             <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[4.84/1]">
+                    <div className="relative w-full h-full">
                         <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
                     </div>
                 </div>

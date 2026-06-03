@@ -1,7 +1,8 @@
 // import Image from "next/image";
 
 import Background from "@/components/Background";
-import Billboard from "@/components/Billboard";
+import Billboard_b from "@/components/Billboard_b";
+import Billboard_f from "@/components/Billboard_f";
 import Concrete_ground from "@/components/Concrete_ground";
 import Rail_con_bushes from "@/components/Rail_con_bushes";
 import Stations from "@/components/Stations";
@@ -15,10 +16,11 @@ export default function Home() {
       <Background />
       <Stations />
       <Trees_b />
-      <Billboard />
+      <Billboard_b />
       <Concrete_ground />
       <Train />
       <Rail_con_bushes />
+      <Billboard_f />
       <Trees_f />
     </div>
   );

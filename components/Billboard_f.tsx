@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
 
 
-export default function Billboard() {
+export default function Billboard_f() {
     const station = useAppSelector(selectStation);
 
     const prevStationRef = useRef<number>(station);
@@ -23,26 +23,26 @@ export default function Billboard() {
             <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard.webp" alt="billboard" fill className='relative object-contain' unoptimized />
-                        <Billboard_content />
+                        {/* <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='hidden relative object-contain' unoptimized /> */}
+                        <Billboard_content tabIndex={0} />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard.webp" alt="billboard" fill className='relative object-contain' unoptimized />
-                        {/* <Billboard_content /> */}
+                        {/* <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='hidden relative object-contain' unoptimized /> */}
+                        <Billboard_content tabIndex={1} />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard.webp" alt="billboard" fill className='relative object-contain' unoptimized />
-                        {/* <Billboard_content /> */}
+                        {/* <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='hidden relative object-contain' unoptimized /> */}
+                        <Billboard_content tabIndex={2} />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard.webp" alt="billboard" fill className='relative object-contain' unoptimized />
-                        {/* <Billboard_content /> */}
+                        {/* <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='hidden relative object-contain' unoptimized /> */}
+                        <Billboard_content tabIndex={3} />
                     </div>
                 </div>
             </motion.div>

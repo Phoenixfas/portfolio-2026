@@ -53,10 +53,10 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className="w-[30%] z-20">
+            <div className="w-[60%] lg:w-[30%] z-20">
                 <div className="w-full h-full bg-[url('/images/env/metal_tex.jpg')] bg-cover bg-center p-1 border border-[#1f2a2c] rounded-r-[99px] rounded-md shadow-[-3px_5px_5px_0px_#000000aa]">
                     <div className="w-full h-full flex items-center justify-between bg-linear-to-br from-[#1f2a2c] to-[#121415] border-4 border-[#121415] shadow-[inset_0px_0px_3px_0px_#ffffff55,0px_0px_6px_0px_#000000] rounded-r-[99px] rounded-sm p-1">
-                        <ul className="flex-1 flex items-center justify-between gap-2 text-[1.1vw] text-white px-5">
+                        <ul className="flex-1 flex items-center justify-between gap-2 text-base lg:text-[1.1vw] text-white px-5">
                             {StationNames.map((name, index) => (
                                 <li key={index} className={`text-center led-dot cursor-pointer duration-500 ${index === station ? "text-[#00ff00]" : "text-[#ff0000]"}`} onClick={() => {
                                     if (index === station) return;
@@ -66,7 +66,7 @@ export default function Navbar() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="w-16 h-16 flex items-center justify-center bg-[#1f2a2c] border-2 border-[#121415] rounded-full transition-all duration-500">
+                        <div className="max-w-16 w-16 h-auto aspect-square flex items-center justify-center bg-[#1f2a2c] border-2 border-[#121415] rounded-full transition-all duration-500">
                             <MyIcon color={isMoving ? "#ff0000" : "#00ff00"} />
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
 
 
 const MyIcon = ({ color }: { color: string }) => (
-    <svg className="duration-500" width="40" height="40" viewBox="0 0 352 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="duration-500 w-[60%] h-[60%]" width="40" height="40" viewBox="0 0 352 352" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M120 64.6257H232C261.823 64.6257 286 88.8024 286 118.626V267.626C286 287.508 269.882 303.626 250 303.626H102C82.1178 303.626 66 287.508 66 267.626V118.626C66 88.8024 90.1766 64.6257 120 64.6257Z" stroke={color} strokeWidth="12" />
         <rect x="92" y="102.626" width="168" height="101" rx="16" stroke={color} strokeWidth="12" />
         <circle cx="112.5" cy="257.126" r="20.5" stroke={color} strokeWidth="12" />
