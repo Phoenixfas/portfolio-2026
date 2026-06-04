@@ -6,8 +6,11 @@ export default function BIO() {
         <div className="relative w-full h-full flex gap-5">
             <div className="min-w-1/3 w-1/3 flex flex-col items-center gap-3 ">
                 <div className="w-4/5">
-                    <TornPaper rounded className='p-1'>
-                        <Image src="https://picsum.photos/500" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' unoptimized />
+                    <TornPaper rounded className='p-[0.5vw]' innerClassName='overflow-hidden'>
+                        <div className="absolute w-full h-full bg-linear-to-b from-[#5C0006] to-[#FF0011] rounded-full overflow-hidden">
+                            <Image src="/images/env/paper_tex.webp" alt="paper_texture" fill className='object-cover mix-blend-multiply' />
+                        </div>
+                        <Image src="/images/stations/Profile_pic.webp" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' unoptimized />
                     </TornPaper>
                 </div>
                 <p className="text-white text-[1.2vw] quicksand font-black">
