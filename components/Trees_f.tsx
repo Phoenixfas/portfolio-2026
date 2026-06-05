@@ -21,32 +21,32 @@ export default function Trees_f() {
             <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-full">
-                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' unoptimized />
+                        <Image src="/images/env/trees_f.webp" alt="trees_f" fill className='relative object-contain' />
                     </div>
                 </div>
             </motion.div>

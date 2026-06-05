@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="w-[60%] lg:w-[30%] z-20">
-                <div className="w-full h-full bg-[url('/images/env/metal_tex.jpg')] bg-cover bg-center p-1 border border-[#1f2a2c] rounded-r-[99px] rounded-md shadow-[-3px_5px_5px_0px_#000000aa]">
+                <div className="w-full h-full bg-[url('/images/env/metal_tex.webp')] bg-cover bg-center p-1 border border-[#1f2a2c] rounded-r-[99px] rounded-md shadow-[-3px_5px_5px_0px_#000000aa]">
                     <div className="w-full h-full flex items-center justify-between bg-linear-to-br from-[#1f2a2c] to-[#121415] border-4 border-[#121415] shadow-[inset_0px_0px_3px_0px_#ffffff55,0px_0px_6px_0px_#000000] rounded-r-[99px] rounded-sm p-1">
                         <ul className="flex-1 flex items-center justify-between gap-2 text-base lg:text-[1.1vw] text-white px-5">
                             {StationNames.map((name, index) => (

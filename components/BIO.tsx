@@ -10,7 +10,7 @@ export default function BIO() {
                         <div className="absolute w-full h-full bg-linear-to-b from-[#5C0006] to-[#FF0011] rounded-full overflow-hidden">
                             <Image src="/images/env/paper_tex.webp" alt="paper_texture" fill className='object-cover mix-blend-multiply' />
                         </div>
-                        <Image src="/images/stations/Profile_pic.webp" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' unoptimized />
+                        <Image src="/images/stations/Profile_pic.webp" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' />
                     </TornPaper>
                 </div>
                 <p className="text-white text-[1.2vw] quicksand font-black">
