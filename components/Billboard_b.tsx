@@ -1,14 +1,21 @@
 'use client';
 
 import Image from "next/image"
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector, useAppDispatch } from "@/redux/hooks";
 import { selectStation } from "@/redux/slices/stationSlice";
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
+import { registerImages, imageLoaded } from '@/redux/slices/loadingSlice'
 
 
 export default function Billboard_b() {
     const station = useAppSelector(selectStation);
+    const dispatch = useAppDispatch();
+    const myImages = ['/images/env/Billboard2.webp'];
+
+    useEffect(() => {
+        dispatch(registerImages(myImages.length));
+    }, [dispatch, myImages.length]);
 
     const prevStationRef = useRef<number>(station);
     const longTransition = Math.abs(station - prevStationRef.current) > 1;
@@ -22,7 +29,7 @@ export default function Billboard_b() {
             <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
                     <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' onLoad={() => dispatch(imageLoaded())} />
                     </div>
                 </div>
                 <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">

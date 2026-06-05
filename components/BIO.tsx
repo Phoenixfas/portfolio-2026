@@ -1,7 +1,19 @@
+'use client';
+
+import { useEffect } from 'react'
+import { useAppDispatch } from '@/redux/hooks'
+import { registerImages, imageLoaded } from '@/redux/slices/loadingSlice'
 import TornPaper from './TornPaper'
 import Image from 'next/image'
 
 export default function BIO() {
+    const dispatch = useAppDispatch();
+    const myImages = ['/images/stations/Profile_pic.webp'];
+
+    useEffect(() => {
+        dispatch(registerImages(myImages.length));
+    }, [dispatch, myImages.length]);
+
     return (
         <div className="relative w-full h-full flex gap-5">
             <div className="min-w-1/3 w-1/3 flex flex-col items-center gap-3 ">
@@ -10,7 +22,7 @@ export default function BIO() {
                         <div className="absolute w-full h-full bg-linear-to-b from-[#5C0006] to-[#FF0011] rounded-full overflow-hidden">
                             <Image src="/images/env/paper_tex.webp" alt="paper_texture" fill className='object-cover mix-blend-multiply' />
                         </div>
-                        <Image src="/images/stations/Profile_pic.webp" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' />
+                        <Image src="/images/stations/Profile_pic.webp" alt="face" width={200} height={200} className='w-full h-auto aspect-square relative object-cover rounded-full' priority onLoad={() => dispatch(imageLoaded())} />
                     </TornPaper>
                 </div>
                 <p className="text-white text-[1.2vw] quicksand font-black">

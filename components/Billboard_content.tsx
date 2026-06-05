@@ -1,7 +1,5 @@
-import React from 'react'
 import BIO from './BIO'
 import SKILLS from './SKILLS'
-import Image from 'next/image'
 import PORTFOLIO from './PORTFOLIO'
 import CONTACT from './CONTACT'
 

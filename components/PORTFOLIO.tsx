@@ -1,7 +1,11 @@
-import React from 'react'
+// 'use client';
+
+// import { useEffect } from 'react'
 import TornPaper from './TornPaper'
 import Image from 'next/image'
 import Link from 'next/link'
+// import { useAppDispatch } from '@/redux/hooks'
+// import { registerImages, imageLoaded } from '@/redux/slices/loadingSlice'
 
 const projects = [
     {
@@ -22,6 +26,13 @@ const projects = [
 ]
 
 export default function PORTFOLIO() {
+    // const dispatch = useAppDispatch();
+    // const myImages = ['https://iili.io/qfW8np4.png', 'https://iili.io/qfWvihB.png', 'https://iili.io/qfWk8RR.png'];
+
+    // useEffect(() => {
+    //     dispatch(registerImages(myImages.length));
+    // }, [dispatch, myImages.length]);
+
     return (
         <div className='relative w-full h-full flex flex-col gap-[1vw] xl:gap-[1.5vw]'>
             <h2 className='text-[3vw] leading-[2.3vw] roboto font-black text-white text-center'>RECENT PROJECTS</h2>
@@ -30,7 +41,7 @@ export default function PORTFOLIO() {
                     <div key={index} className="group flex flex-col gap-[1vh] items-center">
                         <Link href={project.url} target="_blank">
                             <TornPaper className={`p-3 cursor-pointer hover:scale-110 duration-300 ${index === 0 ? '-rotate-3' : index === 1 ? 'rotate-2' : '-rotate-2'}`}>
-                                <Image src={project.img} alt={project.name} width={500} height={300} className='w-full h-auto relative object-cover saturate-0 hover:saturate-100 hover:scale-105 duration-300' unoptimized />
+                                <Image src={project.img} alt={project.name} width={500} height={300} className='w-full h-auto relative object-cover saturate-0 hover:saturate-100 hover:scale-105 duration-300' quality={50} />
                             </TornPaper>
                         </Link>
                         <Link href={project.url} target="_blank">
