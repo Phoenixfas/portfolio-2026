@@ -5,7 +5,8 @@ import CONTACT from './CONTACT'
 
 export default function Billboard_content({ tabIndex }: { tabIndex?: number }) {
     return (
-        <div className={`absolute top-[2%] left-[38.3%] w-[45.7%] h-auto aspect-[2.48/1] bg-linear-to-br from-[#1f2a2c] to-[#121415] shadow-[inset_0px_0px_6px_0px_#000000] px-2 py-5 ${tabIndex === 0 && 'pb-0'} flex flex-col overflow-hidden`}>
+        // <div className={`absolute top-[2%] left-[38.3%] w-[45.7%] h-auto aspect-[2.48/1] bg-linear-to-br from-[#1f2a2c] to-[#121415] shadow-[inset_0px_0px_6px_0px_#000000] px-2 py-5 ${tabIndex === 0 && 'pb-0'} flex flex-col overflow-hidden`}>
+        <div className={`absolute top-[1.5%] left-[2.9%] w-[93%] aspect-[0.64/1] lg:top-[2%] lg:left-[38.3%] lg:w-[45.7%] h-auto lg:aspect-[2.48/1] bg-linear-to-br from-[#1f2a2c] to-[#121415] shadow-[inset_0px_0px_6px_0px_#000000] px-2 py-5 ${tabIndex === 0 && 'lg:pb-0'} flex flex-col overflow-y-scroll scrollbar-track-transparent scrollbar-thumb-red-700 scrollbar-thin xs:overflow-hidden`}>
             {/* <div className="absolute top-0 left-0 w-full h-full">
                 <Image src="/images/env/paper_tex.webp" alt="paper_texture" fill className='object-cover mix-blend-color-dodge brightness-150 invert' />
             </div> */}

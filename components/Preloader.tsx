@@ -1,10 +1,33 @@
 'use client'
-import React from 'react'
-import { useAppSelector } from '@/redux/hooks'
+import { useEffect } from 'react'
+import { useAppSelector, useAppDispatch } from '@/redux/hooks'
 import { motion, AnimatePresence } from 'framer-motion'
+import { setScreenSize } from '@/redux/slices/screenSlice'
 
 export default function Preloader({ children }: { children: React.ReactNode }) {
     const isLoaded = useAppSelector((state) => state.loading.isFullyLoaded)
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        // get device size and set the screen size when the component mounts
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                dispatch(setScreenSize("mb"));
+            } else if (width < 1024) {
+                dispatch(setScreenSize("tb"));
+            } else {
+                dispatch(setScreenSize("dp"));
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <>
@@ -22,7 +45,7 @@ export default function Preloader({ children }: { children: React.ReactNode }) {
                             <object
                                 type="image/svg+xml"
                                 data="/Train_anim2.svg"
-                                className="w-1/3 h-auto"
+                                className="w-sm h-auto"
                                 aria-label="Animated SVG"
                             >
                                 Your browser does not support SVG

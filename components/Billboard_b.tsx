@@ -9,6 +9,7 @@ import { registerImages, imageLoaded } from '@/redux/slices/loadingSlice'
 
 
 export default function Billboard_b() {
+    const screenSize = useAppSelector((state) => state.screen.size);
     const station = useAppSelector(selectStation);
     const dispatch = useAppDispatch();
     const myImages = ['/images/env/Billboard2.webp'];
@@ -25,29 +26,80 @@ export default function Billboard_b() {
         prevStationRef.current = station;
     }, [station]);
     return (
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
-                <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' onLoad={() => dispatch(imageLoaded())} />
+        screenSize === "dp" ?
+            (<div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
+                    <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
+                        <div className="relative w-full h-auto aspect-[2.57028/1]">
+                            <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' onLoad={() => dispatch(imageLoaded())} />
+                        </div>
                     </div>
-                </div>
-                <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                    <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
+                        <div className="relative w-full h-auto aspect-[2.57028/1]">
+                            <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                        </div>
                     </div>
-                </div>
-                <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                    <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
+                        <div className="relative w-full h-auto aspect-[2.57028/1]">
+                            <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                        </div>
                     </div>
-                </div>
-                <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
-                    <div className="relative w-full h-auto aspect-[2.57028/1]">
-                        <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                    <div className="min-w-screen w-screen h-full flex flex-col items-end justify-end">
+                        <div className="relative w-full h-auto aspect-[2.57028/1]">
+                            <Image src="/images/env/Billboard2.webp" alt="billboard" fill className='relative object-contain' />
+                        </div>
                     </div>
-                </div>
-            </motion.div>
-        </div>
+                </motion.div>
+            </div>) :
+            screenSize === "tb" ?
+                (<div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                    <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
+                        <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                            <div className="relative w-auto h-4/5 aspect-1393/2811">
+                                <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' onLoad={() => dispatch(imageLoaded())} />
+                            </div>
+                        </div>
+                        <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                            <div className="relative w-auto h-4/5 aspect-1393/2811">
+                                <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                            </div>
+                        </div>
+                        <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                            <div className="relative w-auto h-4/5 aspect-1393/2811">
+                                <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                            </div>
+                        </div>
+                        <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                            <div className="relative w-auto h-4/5 aspect-1393/2811">
+                                <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>) :
+                screenSize === "mb" ?
+                    (<div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                        <motion.div style={{ translateX: `-${100 / 4 * station}%`, transition: `transform ${longTransition ? 6 : 3}s ease 0s` }} className="relative w-fit h-full flex">
+                            <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                                <div className="relative w-[85%] h-auto xs:w-auto xs:h-4/5 aspect-1393/2811">
+                                    <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' onLoad={() => dispatch(imageLoaded())} />
+                                </div>
+                            </div>
+                            <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                                <div className="relative w-[85%] h-auto xs:w-auto xs:h-4/5 aspect-1393/2811">
+                                    <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                                </div>
+                            </div>
+                            <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                                <div className="relative w-[85%] h-auto xs:w-auto xs:h-4/5 aspect-1393/2811">
+                                    <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                                </div>
+                            </div>
+                            <div className="min-w-screen w-screen h-full flex flex-col items-center justify-end">
+                                <div className="relative w-[85%] h-auto xs:w-auto xs:h-4/5 aspect-1393/2811">
+                                    <Image src="/images/env/Billboard_p.webp" alt="billboard" fill className='relative object-contain' />
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>) : null
     )
 }

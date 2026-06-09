@@ -1,5 +1,10 @@
 @import "tailwindcss";
 @plugin "tailwind-scrollbar";
+
+@theme {
+  --breakpoint-xs: 30rem; /* 480px */
+}
+
 @font-face {
   font-family: "LED_Dot_Matrix";
   src: url("/fonts/LED_Dot_Matrix.ttf") format("truetype");
